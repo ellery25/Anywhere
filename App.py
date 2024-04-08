@@ -19,5 +19,15 @@ def index():
     return "hola"
 
 
+<<<<<<< HEAD
 if __name__ == "__main__":
     app.run(debug=True, port=5000, host="0.0.0.0")
+=======
+@socketio.on('mensaje')
+def handle_message2(msg):
+    print('Emitiendo:', msg)
+    socketio.emit('mensaje', msg)
+
+if __name__ == '__main__':
+    socketio.run(app, debug=True)
+>>>>>>> 9b603a6b870914cfb7ecc265ddcd6e5bdbec547e
